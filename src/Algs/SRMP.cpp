@@ -176,6 +176,9 @@ double Energy::InitSRMP(Sequence& seq, Options& options)
 
 		if (A->weight_forward + w_forward_in == 0) A->weight_forward = 1;
 		if (A->weight_backward + w_backward_in == 0) A->weight_backward = 1;
+
+		++A->weight_forward;
+		++A->weight_backward;
 	}
 
 	return LB_init;
