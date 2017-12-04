@@ -469,6 +469,8 @@ public:
 	void AddRandomEdges(double prob);
 	FactorId GetFactorId(int arity, NodeId* node_indexes); // returns the first such factor (or NULL, if such factor doesn't exist)
 #endif
+
+	friend class EdgeIterator;
 };
 
 inline int Energy::CompareFactors(Factor* A, Factor* B)
