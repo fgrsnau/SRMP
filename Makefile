@@ -6,15 +6,15 @@ OBJS := $(patsubst %.cpp, %.o, $(SOURCES))
 CFLAGS := -O3 -DNDEBUG
 #CFLAGS := -g
 CXX ?= c++
-LIBS := 
+LIBS :=
 INCLUDES := -I./include
-LIBDIR := 
+LIBDIR :=
 
 # Add librt if the target platform is not Darwin (OS X)
 ifneq ($(shell uname -s),Darwin)
     LIBS += -lrt
 endif
- 
+
 all: srmp
 
 srmp: ${OBJS}
